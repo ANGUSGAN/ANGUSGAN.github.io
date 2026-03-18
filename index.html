@@ -223,14 +223,17 @@
         
         .product-image {
             height: 250px;
-            background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #8B4513 100%);
+            background: #ddd;
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
         }
         
-        .product-image-icon {
-            font-size: 5rem;
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .product-info {
@@ -264,6 +267,41 @@
             content: '✓';
             color: var(--primary);
             font-weight: bold;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            padding: 5rem 2rem;
+            background: var(--light);
+        }
+        
+        .gallery .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 250px;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
         }
         
         /* About Section */
@@ -458,6 +496,7 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#products">Products</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#why-us">Why Us</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -505,7 +544,7 @@
         <div class="product-grid">
             <div class="product-card">
                 <div class="product-image">
-                    <span class="product-image-icon">🪵</span>
+                    <img src="微信图片_20260318204501_9_2.jpg" alt="Marine Plywood">
                 </div>
                 <div class="product-info">
                     <h3>Marine Plywood</h3>
@@ -521,7 +560,7 @@
             
             <div class="product-card">
                 <div class="product-image">
-                    <span class="product-image-icon">🏗️</span>
+                    <img src="微信图片_20260318204432_8_2.jpg" alt="Construction Template">
                 </div>
                 <div class="product-info">
                     <h3>Construction Template</h3>
@@ -537,7 +576,7 @@
             
             <div class="product-card">
                 <div class="product-image">
-                    <span class="product-image-icon">📐</span>
+                    <img src="微信图片_20260318204429_7_2.jpg" alt="Custom Plywood">
                 </div>
                 <div class="product-info">
                     <h3>Custom Plywood Solutions</h3>
@@ -553,6 +592,26 @@
         </div>
     </section>
     
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Factory & Products</h2>
+            <p class="section-subtitle">See our manufacturing process and quality products</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="微信图片_20260318204429_7_2.jpg" alt="Factory">
+                </div>
+                <div class="gallery-item">
+                    <img src="微信图片_20260318204432_8_2.jpg" alt="Plywood Detail">
+                </div>
+                <div class="gallery-item">
+                    <img src="微信图片_20260318204501_9_2.jpg" alt="Products">
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- About Section -->
     <section id="about" class="about">
         <div class="about-content">
@@ -560,7 +619,7 @@
                 <h2>About NIGERIA Pioneerplywood</h2>
                 <p>Founded in 2019, NIGERIA Pioneerplywood has grown to become the leading manufacturer of Marine Plywood and construction templates in Nigeria.</p>
                 <p>With over 500 dedicated employees, we are committed to delivering the highest quality products to the construction industry. Our state-of-the-art manufacturing facility in Mopo, Isanlu, Kogi State, produces premium Marine Plywood that meets international standards.</p>
-                <p>As a龙头 enterprise (industry leader), we take pride in our contribution to Nigeria's infrastructure development and construction sector growth.</p>
+                <p>As a leading enterprise, we take pride in our contribution to Nigeria's infrastructure development and construction sector growth.</p>
             </div>
             <div class="about-stats">
                 <div class="about-stat">
